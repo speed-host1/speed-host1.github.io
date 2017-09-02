@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Competition</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:700|Raleway:400,600" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<header>
+		<div class="header-top">
+			<div class="header-top_block">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div class="header-logo">
+								<img src="img/logo.png" alt="Logo">
+								<span>Speed<strong>Host</strong></span>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<ul class="header-nav">
+								<li class="header-nav_item-active"><a href="index.html">home</a></li>
+								<li><a href="#domain">domain</a></li>
+								<li><a href="#subscribe">Subscribe</a></li>
+								<li><a href="#about">about</a></li>
+							</ul>
+						</div>
+						<div class="col-md-4">
+							<div class="header-callback">
+								<a class="header-callback_btn" href="#">Live Chat</a>
+								<a class="header-callback_phone" href="#">6284-6534</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="domain" class="header-main_block">
+			<div class="container">
+				<div class="header-text_block">
+					<h1>Just a Professional Web Hosting Services</h1>
+					<p>modern-fast-reliable</p>
+					<picture>
+						<source type="image/svg+xml" srcset="img/big-icon.svg"></source>
+						<img src="img/big-icon.png" alt="Icon">
+					</picture>
+				</div>
+				<div class="header-form_block">
+					<form action="#">
+						<input type="text" class="header-form_input" placeholder="Your Domain Name...">
+						<select name="domain" class="header-form_select">
+							<option value=".az" selected="selected">.az</option>
+							<option value=".com">.com</option>
+							<option value=".ru">.ru</option>
+							<option value=".org">.org</option>
+							<option value=".info">.info</option>
+						</select>
+						<button class="header-form_btn" type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="subscribe" class="subscribe">
+		<div class="subscribe-panel text-center">
+	        <div class="container">
+	        	<div class="row">
+	        		<div class="col-md-2">
+			            <a href="https://facebook.com" title="Facebook" target="blank">
+			               <i class="fa fa-facebook-square"></i>
+			            </a>
+			        </div>
+			        <div class="col-md-2">
+			            <a href="https://linkedin.com" title="Linkedin" target="blank">
+		                    <i class="fa fa-linkedin-square"></i>
+		                </a>
+			        </div>
+			        <div class="col-md-2">
+		                <a href="https://vk.ru" title="Vkontakte" target="blank">
+		                    <i class="fa fa-vk"></i>
+		                </a>
+			        </div>
+			        <div class="col-md-2">
+		                <a href="https://youtube.com" title="YouTube" target="blank">
+		                    <i class="fa fa-youtube"></i>
+		                </a>
+			        </div>
+			        <div class="col-md-2">
+		        		<a href="https://twitter.com" title="Twitter" target="blank">
+		        			<i class="fa fa-twitter"></i>
+		        		</a>
+			        </div>
+			        <div class="col-md-2">
+			        	<a href="https://instagram.com" title="Instagram" target="blank">
+			        		<i class="fa fa-instagram"></i>
+			        	</a>
+			        </div>
+        		</div>
+	        </div>
+        </div>
+        <p class="subscribe-slide"><div class="subscribe-pull_me">Slide Up/Down For Subscribing</div></p>
+	</section>
+	<footer id="about" class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9">
+						<img src="img/map.png" alt="map">
+						<i class="fa fa-map-marker map-marker" title="Please, drag the marker to select your country"></i>
+				</div>
+				<div class="col-md-3">
+					<div class="about-developer text-center">
+						<p>Developed by <br><a href="https://shebnem97.github.io">Yusifzade Shabnam</a></p>
+						<i class="fa fa-copyright copyright"> &nbsp Copyright &nbsp 2017</i>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	    <script type="text/JavaScript">
+        	$(document).ready(function() {
+			    $('.subscribe-pull_me').click(function() {
+			        $('.subscribe-panel').slideToggle('slow'); 
+			    });
+			});
+
+        	$(document).ready(function() {
+				$('i.map-marker').draggable();
+			});
+
+			$(document).ready(function(){
+			    $(".header-top").on("click","a", function (event) {
+			        event.preventDefault();
+			        var id  = $(this).attr('href'),
+			            top = $(id).offset().top;
+			        $('body,html').animate({scrollTop: top}, 1500);
+			    });
+			});
+        </script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
+	</body>
+</html>

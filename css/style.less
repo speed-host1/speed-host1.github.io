@@ -1,0 +1,232 @@
+html {
+	font-size: 10px;
+}
+
+.raleway-semibold {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+}
+
+.raleway-bold {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+}
+
+.lato {
+	font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+/*color mixins*/
+@main_color: #1e1f65;
+@yellow_color: #ffe13e;
+@vertical-line_color: #ebebeb;
+@form-text_color: #2d2d2d;
+
+header {
+	height: 100vh;
+	min-height: 60rem;
+	background: url('../img/bg.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.header {
+	&-top_block {
+		background-color: #fff;
+		height: 11rem;
+		color: @main_color;
+		a {
+			color: @main_color;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&-logo {
+		height: 11rem;
+		line-height: 11rem;
+		img {
+			vertical-align: middle;
+		}
+ 		span {
+ 			vertical-align: middle;
+ 			margin-left: 1rem;
+ 			font-size: 2rem;
+ 			font-family: 'Rockwell', sans-serif;
+ 		}
+	}	
+    &-nav {
+    	border-right: 1px solid @vertical-line_color;
+    	text-align: center;
+    	height: 11rem;
+    	line-height: 11rem;
+    	li {
+    		display: inline-block;
+    		margin: 0 1rem;
+    		a {
+    			font-family: 'Raleway', sans-serif;
+    			text-transform: uppercase;
+    			font-size: 1.6rem;
+                text-decoration: none;
+                &:hover {
+                    color: @yellow_color;
+                }
+    		}
+    	}
+    	&_item-active a {
+    		color: @yellow_color;
+    		.raleway-bold;
+    	}
+    }
+    &-callback {
+        padding-top: 4rem;
+    	text-align: center;
+    	.raleway-semibold;
+    	&_btn {
+    		font-size: 1.4rem;
+			color: @main_color;
+			background-color: @yellow_color;
+			padding: 1rem 2.5rem;
+			display: inline-block;
+			margin-right: 2rem;
+            &:hover {
+                color: #fff;
+                background-color: @main_color;
+            }
+    	}
+    	&_phone {
+    		border-left: 1px solid @vertical-line_color;
+    		font-size: 2rem;
+    		padding-left: 2rem;
+    		.lato;
+    	}
+    }
+    &-text_block {
+		padding-top: 7%;
+		color: #fff;
+		text-align: center;
+		h1 {
+			font-family: 'Rockwell', sans-serif;
+			font-size: 4.8rem;
+			margin-bottom: 2rem;
+		}
+		p {
+			font-family: 'Raleway', sans-serif;
+			font-size: 3rem;
+			margin-bottom: 4rem;
+		}
+    }
+    &-form {
+	    &_block {
+	    	width: 57rem;
+	    	height: 9rem;
+	    	background-color: fadeout(@vertical-line_color, 50%);
+	    	text-align: center;
+	    	margin: 2rem auto;
+	    	padding-top: 2.2rem;
+	    }
+    	&_input {
+    		background-color: #fff;
+    		padding: 1rem;
+    		height: 5rem;
+    		color: @form-text_color;
+    		display: inline-block;
+    		vertical-align: middle;
+    		margin-right: -.4rem;
+    		border: none;
+    		width: 50%;
+    	}
+
+    	&_select {
+    		display: inline-block;
+    		padding: 1rem;
+    		height: 5rem;
+    		vertical-align: middle;
+    		background-color: @yellow_color;
+    		.raleway-bold;
+    		color: @form-text_color;
+    		margin-right: -.4rem;
+    		width: 10.8rem;
+    		font-size: 1.8rem;
+            border: none;
+    	}
+    	&_btn {
+    		vertical-align: middle;
+    		padding: 1rem;
+    		height: 5rem;
+    		background-color: @yellow_color;
+    		color: #fff;
+    		border: none;
+    		border-left: 1px solid #fff;
+    		border-right: 1px solid #fff;
+    		.raleway-bold;
+    		font-size: 1.4rem;
+    		width: 15.4rem;
+    	}
+	}
+}
+.subscribe {
+    &-panel {
+        background-size: 90% 90%;
+        background-color: @yellow_color;
+        height: 10rem;
+        line-height: 10rem;
+        display: none;
+        .raleway-bold;
+        i.fa { 
+            text-align: center;
+            font-size: 4rem;
+            padding-top: 0.5rem;
+            color: #fff;
+        }
+    }
+    &-slide {
+        margin: 0;
+        padding: 0;
+        border-top: solid 0.2rem @main_color;
+    }
+
+    &-pull_me {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        text-align: center;
+        right: -40%;
+        width: 24rem;
+        height: 6rem;
+        line-height: 6rem;
+        .raleway-bold;
+        font-size: 1.4rem;
+        color: #ffffff;
+        background: @main_color;
+        text-decoration: none;
+        -moz-border-bottom-left-radius: 5px;
+        -moz-border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        &:hover {
+            background-color: @form-text_color;
+        }
+    }
+}
+.about {
+    background-color: @form-text_color;
+    padding: 5rem 0rem 0rem;
+    i.map-marker {
+        color: @yellow_color;
+        font-size: 8rem;
+        cursor: pointer;
+        top: -32.1rem;
+        right: -48rem;
+    }
+    &-developer {
+        padding-top: 50%;
+        color: #fff;
+        float: right;
+        .raleway-bold;
+        font-size: 2rem;
+        a {
+            text-decoration: none;
+        }
+    }
+}
